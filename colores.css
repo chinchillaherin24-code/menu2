@@ -1,0 +1,122 @@
+/* Menú centrado */
+nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Quitar puntos de la lista */
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+/* Decoración del menú */
+nav ul li a{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: inherit; /* mantiene el mismo color */
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: .4s ease;
+    position: relative;
+}
+
+/* Línea decorativa abajo */
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: .4s ease;
+    transform: translateX(-50%);
+}
+
+/* Efecto hover */
+nav ul li a:hover{
+    text-shadow: 0 0 10px white,
+                 0 0 20px white;
+    transform: translateY(-3px);
+}
+
+nav ul li a:hover::after{
+    width: 80%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body{
+    background: linear-gradient(45deg, blue, purple);
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    animation: animate1 8s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Animación del fondo */
+@keyframes animate1{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.boton{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid darkblue;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+}
+
+/* Botones */
+.btn-1{
+    background-color: #a8e6cf;
+    padding: 15px 35px;
+    cursor: pointer;
+    text-decoration: none;
+    color: darkblue;
+    border-radius: 30px;
+    transition: .4s ease;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-1:hover{
+    background-color: lightblue;
+    color: black;
+    box-shadow: 0 0 10px blue,
+                0 0 30px red,
+                0 0 70px blue;
+    transform: scale(1.08);
+}
+
+footer{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
